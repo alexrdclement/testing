@@ -1,0 +1,32 @@
+[versions]
+agp = "8.13.0"
+android-tools = "31.13.0"
+kotlin = "2.2.20"
+android-minSdk = "24"
+android-compileSdk = "36"
+kotlinx-coroutines-test = "1.10.2"
+junit4 = "4.13.2"
+junit-jupiter-api = "5.11.3"
+maven-publish = "0.34.0"
+runtime-android = "1.9.3"
+shipkit-autoversion = "2.1.2"
+shipkit-changelog = "2.0.1"
+
+[libraries]
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "android-tools" }
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit-jupiter-api" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
+shipkit-autoversion = { id = "org.shipkit.shipkit-auto-version", version.ref = "shipkit-autoversion" }
+shipkit-changelog = { id = "org.shipkit.shipkit-changelog", version.ref = "shipkit-changelog" }
+shipkit-githubrelease = { id = "org.shipkit.shipkit-github-release", version.ref = "shipkit-changelog" }
+
+maindispatcherrule-jvm-library = { id = "maindispatcherrule.jvm.library", version = "unspecified" }
+
+[bundles]
