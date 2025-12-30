@@ -1,5 +1,7 @@
 pluginManagement {
-    includeBuild("build-logic")
+    if (file("../gradle-plugins").exists()) {
+        includeBuild("../gradle-plugins")
+    }
     repositories {
         google()
         mavenCentral()
@@ -11,6 +13,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+    }
+    versionCatalogs {
+        if (file("../gradle-plugins").exists()) {
+            create("alexrdclementPluginLibs") {
+                from(files("../gradle-plugins/gradle/libs.versions.toml"))
+            }
+        }
     }
 }
 
