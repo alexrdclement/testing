@@ -2,7 +2,7 @@
 alexrdclement-gradle-plugins = "0.0.35"
 kotlinx-coroutines-test = "1.10.2"
 junit4 = "4.13.2"
-junit-jupiter-api = "5.11.3"
+junit-jupiter-api = "6.0.1"
 
 [libraries]
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
