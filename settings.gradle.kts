@@ -25,7 +25,7 @@ dependencyResolutionManagement {
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "maindispatcherrule"
+rootProject.name = "testing"
 
 include(":maindispatcherrule-junit4")
 include(":maindispatcherrule-junit-jupiter")
