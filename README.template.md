@@ -33,7 +33,7 @@ Add the following to your version catalog:
 
 ```toml
 [versions]
-maindispatcher-extension = "0.0.12"
+maindispatcher-extension = "{{VERSION}}"
 
 [dependencies]
 maindispatcher-extension = { group = "com.alexrdclement.testing", name = "maindispatcher-extension", version.ref = "maindispatcher-extension" }
@@ -48,7 +48,7 @@ testImplementation(libs.maindispatcher.extension)
 Or directly add the dependency in your `build.gradle.kts` file:
 
 ```kotlin
-testImplementation("com.alexrdclement.testing:maindispatcher-extension:0.0.12")
+testImplementation("com.alexrdclement.testing:maindispatcher-extension:{{VERSION}}")
 ```
 
 ## `maindispatcher-rule`
@@ -85,7 +85,7 @@ Add the following to your version catalog:
 
 ```toml
 [versions]
-maindispatcher-rule = "0.0.12"
+maindispatcher-rule = "{{VERSION}}"
 
 [dependencies]
 maindispatcher-rule = { group = "com.alexrdclement.testing", name = "maindispatcher-rule", version.ref = "maindispatcher-rule" }
@@ -101,6 +101,6 @@ Or directly add the dependency in your `build.gradle.kts` file:
 
 ```kotlin
 dependencies {
-    testImplementation("com.alexrdclement.testing:maindispatcher-rule:0.0.12")
+    testImplementation("com.alexrdclement.testing:maindispatcher-rule:{{VERSION}}")
 }
 ```
