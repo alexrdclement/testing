@@ -27,9 +27,5 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "testing"
 
-include(":maindispatcherrule-junit4")
-include(":maindispatcherrule-junit-jupiter")
-
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
-}
+include(":maindispatcher-jupiter-extension")
+include(":maindispatcher-junit-rule")
