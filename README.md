@@ -2,59 +2,67 @@
 
 A collection of Kotlin testing libraries and tools.
 
-## `maindispatcher-jupiter-extension`
+## `maindispatcher-extension`
 
 A JUnit Jupiter Extension that sets `Dispatchers.Main` to a `TestDispatcher` for unit testing coroutines that use the Main dispatcher.
 
 ```kotlin
+import com.alexrdclement.testing.MainDispatcherExtension
+import kotlinx.coroutines.*
+import kotlinx.coroutines.test.runTest
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+
 @ExtendWith(MainDispatcherExtension::class)
 class MainDispatcherTest {
-    
     @Test
     fun `test coroutine with Main dispatcher`() = runTest {
         var result = ""
-
-        launch(Dispatchers.Main) {
-            result = "Hello from Main dispatcher"
-        }
-
+        launch(Dispatchers.Main) { result = "Hello from Main dispatcher" }
         assertEquals("Hello from Main dispatcher", result)
     }
 }
 ```
 
+[Source](maindispatcher-extension/src/main/kotlin/com/alexrdclement/testing/MainDispatcherExtension.kt)
+
 ### Setup
 
-#### Version Catalog
+Add the following to your version catalog:
 
 ```toml
 [versions]
-maindispatcher-jupiter-extension = "0.0.10"
+maindispatcher-extension = "{{VERSION}}"
 
 [dependencies]
-maindispatcher-jupiter-extension = { group = "com.alexrdclement.testing", name = "maindispatcher-jupiter-extension", version.ref = "maindispatcher-jupiter-extension" }
+maindispatcher-extension = { group = "com.alexrdclement.testing", name = "maindispatcher-extension", version.ref = "maindispatcher-extension" }
 ```
 
 Then add the following dependency to your `build.gradle.kts` file:
 
 ```kotlin
-    testImplementation(libs.maindispatcher.jupiter.extension)
+testImplementation(libs.maindispatcher.extension)
 ```
 
-#### build.gradle.kts
+Or directly add the dependency in your `build.gradle.kts` file:
 
 ```kotlin
-dependencies {
-    testImplementation("com.alexrdclement.testing:maindispatcher-jupiter-extension:0.0.10")
-}
+testImplementation("com.alexrdclement.testing:maindispatcher-extension:{{VERSION}}")
 ```
 
-
-## `maindispatcher-junit-rule`
+## `maindispatcher-rule`
 
 A JUnit 4 Rule that sets `Dispatchers.Main` to a `TestDispatcher` for unit testing coroutines that use the Main dispatcher.
 
 ```kotlin
+import com.alexrdclement.testing.MainDispatcherRule
+import kotlinx.coroutines.*
+import kotlinx.coroutines.test.runTest
+import org.junit.Assert.assertEquals
+import org.junit.Rule
+import org.junit.Test
+
 class MainDispatcherTest {
 
     @get:Rule
@@ -63,38 +71,36 @@ class MainDispatcherTest {
     @Test
     fun `test coroutine with Main dispatcher`() = runTest {
         var result = ""
-
-        launch(Dispatchers.Main) {
-            result = "Hello from Main dispatcher"
-        }
-
+        launch(Dispatchers.Main) { result = "Hello from Main dispatcher" }
         assertEquals("Hello from Main dispatcher", result)
     }
 }
 ```
 
+[Source](maindispatcher-rule/src/main/kotlin/com/alexrdclement/testing/MainDispatcherRule.kt)
+
 ### Setup
 
-To use `maindispatcher-junit-rule`, add the following to your version catalog:
+Add the following to your version catalog:
 
 ```toml
 [versions]
-maindispatcher-junit-rule = "0.0.10"
+maindispatcher-rule = "{{VERSION}}"
 
 [dependencies]
-maindispatcher-junit-rule = { group = "com.alexrdclement.testing", name = "maindispatcher-junit-rule", version.ref = "maindispatcher-junit-rule" }
+maindispatcher-rule = { group = "com.alexrdclement.testing", name = "maindispatcher-rule", version.ref = "maindispatcher-rule" }
 ```
 
 Then add the following dependency to your `build.gradle.kts` file:
 
 ```kotlin
-    testImplementation(libs.maindispatcher.junit.rule)
+testImplementation(libs.maindispatcher.rule)
 ```
 
-#### build.gradle.kts
+Or directly add the dependency in your `build.gradle.kts` file:
 
 ```kotlin
 dependencies {
-    testImplementation("com.alexrdclement.testing:maindispatcher-junit-rule:0.0.10")
+    testImplementation("com.alexrdclement.testing:maindispatcher-rule:{{VERSION}}")
 }
 ```

@@ -27,5 +27,5 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "testing"
 
-include(":maindispatcher-jupiter-extension")
-include(":maindispatcher-junit-rule")
+include(":maindispatcher-extension")
+include(":maindispatcher-rule")

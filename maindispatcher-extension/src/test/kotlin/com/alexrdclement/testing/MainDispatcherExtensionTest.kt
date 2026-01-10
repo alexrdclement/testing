@@ -1,17 +1,13 @@
 package com.alexrdclement.testing
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.RegisterExtension
+import org.junit.jupiter.api.extension.ExtendWith
 
+@ExtendWith(MainDispatcherExtension::class)
 class MainDispatcherExtensionTest {
-
-    @JvmField
-    @RegisterExtension
-    val mainDispatcherExtension = MainDispatcherExtension()
 
     @Test
     fun `test coroutine with Main dispatcher`() = runTest {
