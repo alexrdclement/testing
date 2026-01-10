@@ -29,7 +29,7 @@ class MainDispatcherTest {
 
 ```toml
 [versions]
-maindispatcher-jupiter-extension = "{{VERSION}}"
+maindispatcher-jupiter-extension = "0.0.10"
 
 [dependencies]
 maindispatcher-jupiter-extension = { group = "com.alexrdclement.testing", name = "maindispatcher-jupiter-extension", version.ref = "maindispatcher-jupiter-extension" }
@@ -45,7 +45,7 @@ Then add the following dependency to your `build.gradle.kts` file:
 
 ```kotlin
 dependencies {
-    testImplementation("com.alexrdclement.testing:maindispatcher-jupiter-extension:{{VERSION}}")
+    testImplementation("com.alexrdclement.testing:maindispatcher-jupiter-extension:0.0.10")
 }
 ```
 
@@ -79,7 +79,7 @@ To use `maindispatcher-junit-rule`, add the following to your version catalog:
 
 ```toml
 [versions]
-maindispatcher-junit-rule = "{{VERSION}}"
+maindispatcher-junit-rule = "0.0.10"
 
 [dependencies]
 maindispatcher-junit-rule = { group = "com.alexrdclement.testing", name = "maindispatcher-junit-rule", version.ref = "maindispatcher-junit-rule" }
@@ -95,6 +95,6 @@ Then add the following dependency to your `build.gradle.kts` file:
 
 ```kotlin
 dependencies {
-    testImplementation("com.alexrdclement.testing:maindispatcher-junit-rule:{{VERSION}}")
+    testImplementation("com.alexrdclement.testing:maindispatcher-junit-rule:0.0.10")
 }
 ```
