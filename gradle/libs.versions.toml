@@ -1,5 +1,5 @@
 [versions]
-alexrdclement-gradle-plugins = "0.0.96"
+alexrdclement-gradle-plugins = "0.0.100"
 kotlinx-coroutines-test = "1.11.0"
 junit4 = "4.13.2"
 junit-jupiter-api = "6.1.0"
