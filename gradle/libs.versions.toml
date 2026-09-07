@@ -1,5 +1,5 @@
 [versions]
-alexrdclement-gradle-plugins = "0.0.111"
+embarrasdf-gradle-plugins = "0.0.127"
 kotlinx-coroutines-test = "1.11.0"
 junit4 = "4.13.2"
 junit-jupiter-api = "6.1.0"
@@ -12,9 +12,9 @@ junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engi
 junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher" }
 
 [plugins]
-alexrdclement-jvm-library = { id = "com.alexrdclement.gradle.plugin.jvm.library", version.ref = "alexrdclement-gradle-plugins" }
-alexrdclement-kotlin-multiplatform-library = { id = "com.alexrdclement.gradle.plugin.kotlin.multiplatform.library", version.ref = "alexrdclement-gradle-plugins" }
-alexrdclement-maven-publish = { id = "com.alexrdclement.gradle.plugin.maven.publish", version.ref = "alexrdclement-gradle-plugins" }
-alexrdclement-github-release = { id = "com.alexrdclement.gradle.plugin.github.release", version.ref = "alexrdclement-gradle-plugins" }
+embarrasdf-github-release = { id = "com.embarrasdf.gradle.plugin.github.release", version.ref = "embarrasdf-gradle-plugins" }
+embarrasdf-jvm-library = { id = "com.embarrasdf.gradle.plugin.jvm.library", version.ref = "embarrasdf-gradle-plugins" }
+embarrasdf-kotlin-multiplatform-library = { id = "com.embarrasdf.gradle.plugin.kotlin.multiplatform.library", version.ref = "embarrasdf-gradle-plugins" }
+embarrasdf-maven-publish = { id = "com.embarrasdf.gradle.plugin.maven.publish", version.ref = "embarrasdf-gradle-plugins" }
 
 [bundles]

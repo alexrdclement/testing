@@ -1,6 +1,6 @@
 plugins {
-    id(libs.plugins.alexrdclement.jvm.library.get().pluginId)
-    id(libs.plugins.alexrdclement.maven.publish.get().pluginId)
+    id(libs.plugins.embarrasdf.jvm.library.get().pluginId)
+    id(libs.plugins.embarrasdf.maven.publish.get().pluginId)
 }
 
 dependencies {
